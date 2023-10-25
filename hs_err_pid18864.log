@@ -1,0 +1,209 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/share/memory/allocation.cpp:45), pid=18864, tid=15704
+#
+# JRE version:  (13.0.2+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (13.0.2+8, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF8 -Dfile.encoding=UTF-8 --module-path=D:\Java\JavaApplication1\build\classes javaapplication1.Demo
+
+Host: Intel(R) Core(TM) i5-2430M CPU @ 2.40GHz, 4 cores, 5G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2546)
+Time: Sat Apr  8 20:55:19 2023 SE Asia Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002afc8dab800):  JavaThread "Unknown thread" [_thread_in_vm, id=15704, stack(0x000000f22fc00000,0x000000f22fd00000)]
+
+Stack: [0x000000f22fc00000,0x000000f22fd00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x624f9a]
+V  [jvm.dll+0x770cfa]
+V  [jvm.dll+0x7724af]
+V  [jvm.dll+0x772ab3]
+V  [jvm.dll+0x24bf08]
+V  [jvm.dll+0xb8d8f]
+V  [jvm.dll+0x2ed783]
+V  [jvm.dll+0x2e6765]
+V  [jvm.dll+0x74dd78]
+V  [jvm.dll+0x361989]
+V  [jvm.dll+0x730e65]
+V  [jvm.dll+0x3cc53f]
+V  [jvm.dll+0x3ce861]
+C  [jli.dll+0x51ff]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17614]
+C  [ntdll.dll+0x526a1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007fff4417ccb8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000002afc8de2000 GCTaskThread "GC Thread#0" [stack: 0x000000f22fd00000,0x000000f22fe00000] [id=16580]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff439b2260]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002afc8da84d0] Heap_lock - owner thread: 0x000002afc8dab800
+
+Heap address: 0x00000000a1600000, size: 1514 MB, Compressed Oops mode: Non-zero based: 0x00000000a1600000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (8 events):
+Event: 0.016 Loaded shared library C:\Program Files\Java\jdk-13.0.2\bin\zip.dll
+Event: 0.017 Loaded shared library C:\Program Files\Java\jdk-13.0.2\bin\jimage.dll
+Event: 0.019 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjava.base-coop.dll failed, error code 126
+Event: 0.020 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjava.logging-coop.dll failed, error code 126
+Event: 0.020 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjdk.compiler-coop.dll failed, error code 126
+Event: 0.020 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjdk.scripting.nashorn-coop.dll failed, error code 126
+Event: 0.020 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjdk.internal.vm.ci-coop.dll failed, error code 126
+Event: 0.020 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjdk.internal.vm.compiler-coop.dll failed, error code 126
+
+
+Dynamic libraries:
+0x00007ff796210000 - 0x00007ff79621f000 	C:\Program Files\Java\jdk-13.0.2\bin\java.exe
+0x00007fff763d0000 - 0x00007fff765c8000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fff75720000 - 0x00007fff757df000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fff73ff0000 - 0x00007fff742c2000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fff742d0000 - 0x00007fff743d0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fff70310000 - 0x00007fff70325000 	C:\Program Files\Java\jdk-13.0.2\bin\VCRUNTIME140.dll
+0x00007fff6c5e0000 - 0x00007fff6c5f8000 	C:\Program Files\Java\jdk-13.0.2\bin\jli.dll
+0x00007fff74420000 - 0x00007fff744ce000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fff745a0000 - 0x00007fff7463e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fff76070000 - 0x00007fff7610c000 	C:\WINDOWS\System32\sechost.dll
+0x00007fff76170000 - 0x00007fff76294000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fff75100000 - 0x00007fff752a1000 	C:\WINDOWS\System32\USER32.dll
+0x00007fff73ad0000 - 0x00007fff73af2000 	C:\WINDOWS\System32\win32u.dll
+0x00007fff74730000 - 0x00007fff7475b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fff73d20000 - 0x00007fff73e2f000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fff72e10000 - 0x00007fff730aa000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007fff73f50000 - 0x00007fff73fed000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fff73820000 - 0x00007fff7382a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fff762b0000 - 0x00007fff762e0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fff73830000 - 0x00007fff73866000 	C:\WINDOWS\system32\DriverStore\FileRepository\nvam.inf_amd64_1aae4f19e68d0780\nvinitx.dll
+0x00007fff757e0000 - 0x00007fff75f25000 	C:\WINDOWS\System32\Shell32.dll
+0x00007fff70d40000 - 0x00007fff714d2000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007fff74cf0000 - 0x00007fff75045000 	C:\WINDOWS\System32\combase.dll
+0x00007fff72d70000 - 0x00007fff72da0000 	C:\WINDOWS\SYSTEM32\Wldp.dll
+0x00007fff75050000 - 0x00007fff750fd000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007fff76010000 - 0x00007fff76065000 	C:\WINDOWS\System32\shlwapi.dll
+0x0000000077780000 - 0x0000000077786000 	C:\Program Files\NVIDIA Corporation\CoProcManager\_etoured.dll
+0x00007fff5cd90000 - 0x00007fff5cdd3000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvd3d9wrapx.dll
+0x00007fff752b0000 - 0x00007fff75718000 	C:\WINDOWS\System32\SETUPAPI.dll
+0x00007fff743d0000 - 0x00007fff7441e000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007fff73cf0000 - 0x00007fff73d17000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007fff60330000 - 0x00007fff6035d000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvdxgiwrapx.dll
+0x00007fff52b80000 - 0x00007fff52c1b000 	C:\Program Files\Java\jdk-13.0.2\bin\msvcp140.dll
+0x00007fff436c0000 - 0x00007fff4421d000 	C:\Program Files\Java\jdk-13.0.2\bin\server\jvm.dll
+0x00007fff74720000 - 0x00007fff74728000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fff66680000 - 0x00007fff666a7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fff611e0000 - 0x00007fff611e9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fff744d0000 - 0x00007fff7453b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fff70b40000 - 0x00007fff70b52000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fff71c70000 - 0x00007fff71c80000 	C:\Program Files\Java\jdk-13.0.2\bin\verify.dll
+0x00007fff73420000 - 0x00007fff73604000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fff73360000 - 0x00007fff73395000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fff73b00000 - 0x00007fff73b82000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fff6c500000 - 0x00007fff6c526000 	C:\Program Files\Java\jdk-13.0.2\bin\java.dll
+0x00007fff6ea10000 - 0x00007fff6ea27000 	C:\Program Files\Java\jdk-13.0.2\bin\zip.dll
+0x00007fff70300000 - 0x00007fff7030a000 	C:\Program Files\Java\jdk-13.0.2\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-13.0.2\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\WINDOWS\system32\DriverStore\FileRepository\nvam.inf_amd64_1aae4f19e68d0780;C:\Program Files\NVIDIA Corporation\CoProcManager;C:\Program Files\Java\jdk-13.0.2\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF8 -Dfile.encoding=UTF-8 --module-path=D:\Java\JavaApplication1\build\classes 
+java_command: javaapplication1.Demo
+java_class_path (initial): D:\Java\JavaApplication1\build\classes
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 100663296                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1587544064                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 1587544064                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+PATH=C:\Program Files\Java\jdk-13.0.2\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\PuTTY\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\Maven\apache-maven-3.6.3\bin;C:\Program Files\Java\Spring\spring-2.3.1.RELEASE\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Users\ASUS\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\ASUS\AppData\Local\Programs\Python\Python310\;C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps;C:\Users\ASUS\.dotnet\tools;C:\Users\ASUS\AppData\Local\Programs\Microsoft VS Code\bin;D:\Java;
+USERNAME=ASUS
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.2546)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, ht, tsc, tscinvbit
+
+Memory: 4k page, system-wide physical 6054M (423M free)
+TotalPageFile size 10150M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 13M, peak: 13M
+current process commit charge ("private bytes"): 49M, peak: 50M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (13.0.2+8) for windows-amd64 JRE (13.0.2+8), built on Dec 11 2019 09:20:33 by "mach5one" with unknown MS VC++:1916
+
+END.
